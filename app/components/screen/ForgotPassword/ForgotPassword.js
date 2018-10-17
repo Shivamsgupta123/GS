@@ -31,7 +31,7 @@ export default class ForgotPassword extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <Header title='Forgot Password' leftIcon={true} goBack={() => this.props.navigation.goBack()} />
+                <Header title='Forgot Password' leftIcon={true} action={() => this.props.navigation.goBack()} />
                 <View style={styles.TextInputView}>
                     <Icon name="user" size={25} style={styles.icon} />
                     <TextInput onChangeText={(text) => this.setState({ Username: text })} style={styles.textinput} placeholder="Email" placeholderTextColor="#456038" ></TextInput>

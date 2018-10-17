@@ -23,9 +23,7 @@ export default styles = StyleSheet.create({
         borderWidth: 1,
         padding: Platform.OS === 'ios' ? 10 : 0,
         margin: 6,
-
         flexDirection: 'row'
-
     },
 
     textinput: {
@@ -39,8 +37,6 @@ export default styles = StyleSheet.create({
         textShadowColor: 'black',
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 5
-
-
     },
     loginbutton: {
         borderWidth: 1,
@@ -183,9 +179,10 @@ export default styles = StyleSheet.create({
         color: '#ffffff'
     },
     mainview: {
-        height: Dimensions.get('window').height,
-        width: Dimensions.get('window').width,
-        backgroundColor: color.LightGreen
+        // height: Dimensions.get('window').height,
+        // width: Dimensions.get('window').width,
+        backgroundColor: color.LightGreen,
+        flex: 1
     },
     icon: {
         paddingTop: Platform.OS === 'ios' ? 0 : 8,

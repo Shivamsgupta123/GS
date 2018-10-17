@@ -14,28 +14,28 @@ export default class Login extends Component {
         }
     }
     validate() {
-        if (EmptyField(this.state.Username) || Email(this.state.Username)) {
-            Toast.show({
-                text: "Enter Valid User Name.",
-                duration: 1500,
-                type: "warning"
-            })
-            return false
-        }
-        else
-            if (EmptyField(this.state.Password)) {
-                Toast.show({
-                    text: "Enter Valid Password.",
-                    duration: 1500,
-                    type: "warning"
-                })
-                return false
-            }
-            else
-                this.login()
+        // if (EmptyField(this.state.Username) || Email(this.state.Username)) {
+        //     Toast.show({
+        //         text: "Enter Valid User Name.",
+        //         duration: 1500,
+        //         type: "warning"
+        //     })
+        //     return false
+        // }
+        // else
+        //     if (EmptyField(this.state.Password)) {
+        //         Toast.show({
+        //             text: "Enter Valid Password.",
+        //             duration: 1500,
+        //             type: "warning"
+        //         })
+        //         return false
+        //     }
+        //     else
+        this.login()
     }
     login() {
-        this.props.navigation.replace("Home")
+        this.props.navigation.replace("MyApp")
     }
 
     render() {

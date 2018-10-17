@@ -91,9 +91,7 @@ export default class Registration extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                {/* <View> */}
-                <Header title='Registration' leftIcon={true} goBack={() => this.props.navigation.goBack()} />
-                {/* </View> */}
+                <Header title='Registration' leftIcon={true} action={() => this.props.navigation.goBack()} />
                 <ScrollView >
                     <View style={styles.TextInputView}>
                         <Icon name="user" size={25} style={styles.icon} />
@@ -117,7 +115,7 @@ export default class Registration extends Component {
                     </View>
                     <View style={styles.TextInputView}>
                         <Icon name="phone" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ PhoneNumber: text })} style={styles.textinput} placeholder="Phone Number" placeholderTextColor="#456038" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ PhoneNumber: text })} style={styles.textinput} placeholder="Phone Number" placeholderTextColor="#456038" keyboardType="phone-pad" ></TextInput>
                     </View>
                     <TouchableOpacity onPress={() => this.validate()} style={styles.loginbutton}>
                         <Text style={styles.buttontext}>SUBMIT</Text>

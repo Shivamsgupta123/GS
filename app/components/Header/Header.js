@@ -13,7 +13,8 @@ export default class Header extends Component {
         return (
             <View style={styles.Container}>
                 <View style={styles.BackButtonView}>
-                    <TouchableOpacity onPress={this.props.goBack}>
+                    <TouchableOpacity onPress={this.props.action}>
+                        {this.props.menuBar ? <Icon name="bars" size={28} style={styles.BackButton} /> : null}
                         {this.props.leftIcon ? <Icon name="angle-left" size={30} style={styles.BackButton} /> : null}
                     </TouchableOpacity>
                 </View>
