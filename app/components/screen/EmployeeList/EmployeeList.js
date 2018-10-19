@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground, Alert, BackHandler, KeyboardAvoidingView, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Animated, Easing } from 'react-native';
+import { View, Text, ImageBackground, Alert, FlatList, BackHandler, Image, KeyboardAvoidingView, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Animated, Easing } from 'react-native';
 import styles from './Styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Toast } from 'native-base'
@@ -9,13 +9,32 @@ import Header from '../../Header/Header';
 export default class EmployeeList extends Component {
     constructor(props) {
         super(props)
+        this.EmployeeData = [{ Name: "xyz lmn", UserImage: require("../../../assets/images/user.png"), Contact: "9874563210", Salary: "25000/-", DOJ: "25/12/18" }, { Name: "abc pqr", UserImage: require("../../../assets/images/user.png"), Contact: "9987425879", Salary: "20000/-", DOJ: "25/12/15" }]
     }
     render() {
         return (
             <View style={styles.Container}>
                 <Header title='Employee List' leftIcon={true} action={() => this.props.navigation.goBack()} />
-                <View style={{ flex: 1 }}>
-                </View>
+                <FlatList
+                    data={this.EmployeeData}
+                    renderItem={({ item }) =>
+                        (
+                            <View style={{ flex: 1, marginTop: 5 }}>
+                                <View style={styles.UserDetailView}>
+                                    <View style={styles.UserImageView}>
+                                        <Image style={styles.UserImage} source={item.UserImage} />
+                                    </View>
+                                    <View style={styles.UserDetail}>
+                                        <Text style={styles.text}>Name: {item.Name}</Text>
+                                        <Text style={styles.text1}>Contact No: {item.Contact}</Text>
+                                        <Text style={styles.text1}>Salary: {item.Salary}</Text>
+                                        <Text style={styles.text1}>Date Of Joining: {item.DOJ}</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        )}
+                    keyExtractor={(item, index) => '' + index}
+                />
                 <TouchableOpacity style={styles.loginbutton} onPress={() => this.props.navigation.navigate("AddEmployee")}>
                     <Text style={styles.buttontext}>ADD EMPLOYEE</Text>
                 </TouchableOpacity>

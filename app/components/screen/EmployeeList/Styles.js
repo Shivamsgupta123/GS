@@ -5,8 +5,8 @@ import * as font from '../../../utils/FontSize';
 export default styles = StyleSheet.create({
     Container: {
         flex: 1,
-        backgroundColor: color.LightGreen,
-        alignItems: "center"
+        // backgroundColor: color.LightGreen,
+        // alignItems: "center"
     },
     loginbutton: {
         // borderWidth: 1,
@@ -30,4 +30,39 @@ export default styles = StyleSheet.create({
         textShadowOffset: { width: 1, height: 2 },
         textShadowRadius: 5
     },
+    UserDetailView: {
+
+        flex: 1,
+        flexDirection: "row"
+    },
+    UserImageView: {
+        alignItems: "center",
+        justifyContent: "center",
+        width: "25%",
+        // height: "100%",
+        backgroundColor: color.White
+    },
+    UserImage: {
+        height: 80,
+        width: 65,
+        borderColor: color.LightGreen,
+        borderWidth: 1,
+    },
+    UserDetail: {
+        width: "75%",
+        backgroundColor: color.White,
+        height: "100%",
+        justifyContent: "center",
+        // alignItems: "center"
+        marginBottom: 20,
+
+    },
+    text: {
+        color: color.PlusIconBackground,
+        fontSize: font.RegularFont,
+        fontWeight: font.ButtonFontWeight
+    },
+    text1: {
+        color: color.PlusIconBackground
+    }
 })

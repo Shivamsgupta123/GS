@@ -16,7 +16,7 @@ export default class AttendanceSheet extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <Header title='Attendance Sheet' leftIcon={true} action={() => this.props.navigation.goBack()} />
-                <Tabs>
+                <Tabs locked={true}>
                     <Tab
                         activeTabStyle={styles.ActiveTabStyle}
                         tabStyle={styles.TabStyle}

@@ -111,6 +111,10 @@ export default class AddEmployee extends Component {
                         <Icon name="dollar" size={25} style={styles.icon} />
                         <TextInput onChangeText={(text) => this.setState({ Salary: text })} style={styles.textinput} placeholder="Salary" placeholderTextColor="white" keyboardType="phone-pad" ></TextInput>
                     </View>
+                    <View style={styles.view3}>
+                        <Icon name="dollar" size={25} style={styles.icon} />
+                        <TextInput onChangeText={(text) => this.setState({ Salary: text })} style={styles.textinput} placeholder="Date Of Joining" placeholderTextColor="white" keyboardType="phone-pad" ></TextInput>
+                    </View>
                     <TouchableOpacity style={styles.loginbutton} onPress={() => this.validate()}>
                         <Text style={styles.buttontext}>SUBMIT</Text>
                     </TouchableOpacity>

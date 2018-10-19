@@ -15,7 +15,7 @@ export default styles = StyleSheet.create({
         borderColor: color.White,
         borderWidth: 1,
         padding: Platform.OS === 'ios' ? 10 : 0,
-        marginTop: 20,
+        marginTop: 15,
         flexDirection: 'row',
         alignItems: "center"
     },
