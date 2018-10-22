@@ -16,6 +16,7 @@ export default styles = StyleSheet.create({
         borderColor: color.White,
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "row"
     },
     ButtonView: {
         flex: 1,

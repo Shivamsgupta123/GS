@@ -11,6 +11,7 @@ import EmployeeList from './app/components/screen/EmployeeList/EmployeeList';
 import AddEmployee from './app/components/screen/AddEmployee/AddEmployee';
 import Drawer from './app/components/Drawer/Drawer';
 import AttendanceSheet from './app/components/screen/AttendanceSheet/AttendanceSheet';
+import ProductDetail from './app/components/screen/ProductDetail/ProductDetail';
 
 const MyApp = createDrawerNavigator({
     Home: {
@@ -64,6 +65,12 @@ const RootStack = createStackNavigator({
     },
     AttendanceSheet: {
         screen: AttendanceSheet,
+        navigationOptions: {
+            header: null,
+        }
+    },
+    ProductDetail: {
+        screen: ProductDetail,
         navigationOptions: {
             header: null,
         }

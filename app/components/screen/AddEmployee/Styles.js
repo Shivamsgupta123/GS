@@ -49,7 +49,8 @@ export default styles = StyleSheet.create({
         fontSize: 5,
         borderColor: color.White,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        // marginBottom: 10
     },
     buttontext: {
 

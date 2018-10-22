@@ -60,9 +60,27 @@ export default styles = StyleSheet.create({
     text: {
         color: color.PlusIconBackground,
         fontSize: font.RegularFont,
-        fontWeight: font.ButtonFontWeight
+        fontWeight: font.ButtonFontWeight,
+        // backgroundColor: "blue"
     },
     text1: {
-        color: color.PlusIconBackground
+        color: color.PlusIconBackground,
+        // backgroundColor: "red"
+    },
+    DeleteButton: {
+        marginLeft: "70%",
+        // marginTop: "8%",
+        backgroundColor: color.LightGreen,
+        // padding: 15,
+        borderRadius: 25,
+        height: 50,
+        width: 50,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    DeleteButtonView: {
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%"
     }
 })

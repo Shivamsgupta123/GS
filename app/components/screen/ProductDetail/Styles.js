@@ -1,11 +1,11 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import { Platform, StyleSheet, Dimensions } from 'react-native';
 import * as color from '../../../utils/Color';
 import * as font from '../../../utils/FontSize';
 
 export default styles = StyleSheet.create({
     Container: {
         flex: 1,
-        // backgroundColor: color.LightGreen,
+        backgroundColor: color.LightGreen,
         // alignItems: "center"
     },
     ImageView: {
@@ -14,9 +14,9 @@ export default styles = StyleSheet.create({
         alignItems: "center"
     },
     LogoImage: {
-        height: 80,
-        width: 80,
-        borderRadius: 40,
+        height: 70,
+        width: 70,
+        borderRadius: 35,
         borderWidth: 2,
         borderColor: "white"
     },
@@ -37,7 +37,7 @@ export default styles = StyleSheet.create({
         paddingRight: 10,
         borderBottomWidth: 2,
         borderColor: color.White,
-        color: color.PlusIconBackground
+        color: color.White
     },
     textInput: {
         height: 45,
@@ -45,8 +45,7 @@ export default styles = StyleSheet.create({
         fontSize: font.RegularFont,
         marginTop: 14,
         borderBottomWidth: 2,
-        borderColor: color.White,
-        color: color.White
+        borderColor: color.White
     },
     CheckBoxView: {
         height: "33.3%",
@@ -57,7 +56,7 @@ export default styles = StyleSheet.create({
     checkBoxText: {
         paddingLeft: 20,
         fontSize: 15,
-        color: color.PlusIconBackground
+        color: color.White
     },
     LoginButtonView: {
         height: "30%",
@@ -79,12 +78,12 @@ export default styles = StyleSheet.create({
     },
     Text: {
         fontSize: font.RegularFont,
-        color: color.White,
+        color: color.PlusIconBackground,
         fontWeight: font.ButtonFontWeight,
         marginTop: 5
     },
     SubView: {
-        height: Platform.OS == 'ios' ? "10%" : "13%",
+        height: "13%",
         justifyContent: "space-between",
         padding: 10,
         flexDirection: "row",
@@ -93,13 +92,6 @@ export default styles = StyleSheet.create({
     },
     AddAccount: {
         paddingRight: 10,
-        paddingTop: 5,
-        color: color.White
-    },
-    linearGradient: {
-        flex: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
-        borderRadius: 5
-    },
+        color: color.PlusIconBackground
+    }
 })
