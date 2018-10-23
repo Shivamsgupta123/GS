@@ -33,7 +33,7 @@ export default styles = StyleSheet.create({
         height: "30%",
     },
     SubView: {
-        height: "35%",
+        height: "55%",
         // height:"70%",
         justifyContent: "center",
     },
@@ -54,7 +54,8 @@ export default styles = StyleSheet.create({
     IconView: {
         width: "15%",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        //     backgroundColor: "blue"
     }
 
 });

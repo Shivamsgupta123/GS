@@ -6,6 +6,7 @@ import { Toast } from 'native-base'
 import { EmptyField, Email, Password, Name, PhoneNumber } from '../../../lib/Validation';
 import { ListItem, CheckBox, Body } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient';
+import { translate } from '../../../Translation/Translation';
 
 export default class ProductDetail extends Component {
     constructor(props) {
@@ -57,35 +58,35 @@ export default class ProductDetail extends Component {
                     <KeyboardAvoidingView style={{ height: Dimensions.get('window').height }}>
                         <View style={{ flex: 1 }}>
                             <View style={styles.ImageView}>
-                                <Image source={require('../../../assets/images/lion.jpg')} style={styles.LogoImage} />
-                                <Text style={styles.LogIn}>LOG IN</Text>
+                                <Image source={require('../../../assets/images/ls.jpg')} style={styles.LogoImage} />
+                                {/* <Text style={styles.LogIn}>{translate("Login.LOG IN")}</Text> */}
                             </View>
 
                             <View style={{ height: "40%" }}>
                                 <View style={styles.TextInputView}>
                                     <Icon name="user" size={23} color="#f78a04" style={styles.icon} />
-                                    <TextInput onChangeText={(text) => this.setState({ Email: text })} placeholder="Email Id" placeholderTextColor="white" style={styles.textInput} ></TextInput>
+                                    <TextInput onChangeText={(text) => this.setState({ Email: text })} placeholder={translate("Login.Email Id")} placeholderTextColor="#f78a04" style={styles.textInput} ></TextInput>
                                 </View>
                                 <View style={styles.TextInputView}>
-                                    <Icon name="lock" size={25} style={styles.icon} />
-                                    <TextInput onChangeText={this.handleText} placeholder="Password" placeholderTextColor="white" style={styles.textInput} ></TextInput>
+                                    <Icon name="lock" color="#005408" size={25} style={styles.icon} />
+                                    <TextInput onChangeText={this.handleText} placeholder={translate("Login.Password")} placeholderTextColor="#005408" style={styles.textInput} secureTextEntry={true}></TextInput>
                                 </View>
                                 <View style={styles.CheckBoxView}>
                                     <CheckBox checked={this.state.isChecked} onPress={this.checkBoxClicked} color="green" style={{ left: 0 }} />
-                                    <Text style={styles.checkBoxText}>Remember Me</Text>
+                                    <Text style={styles.checkBoxText}>{translate("Login.Remember Me")}</Text>
                                 </View>
                             </View>
                             <View style={styles.LoginButtonView}>
                                 <TouchableOpacity style={styles.LoginTouch} onPress={() => this.validate()} >
-                                    <Text style={styles.LoginButtonText}>Login</Text>
+                                    <Text style={styles.LoginButtonText}>{translate("Login.Login")}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate("ForgotPassword")}>
-                                    <Text style={styles.Text}>Forgot Password?</Text>
+                                    <Text style={styles.Text}>{translate("Login.Forgot Password?")}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
                         <View style={styles.SubView}>
-                            <Text style={styles.Text}>Dont Have An Account?</Text>
+                            <Text style={styles.Text}>{translate("Login.Dont Have An Account?")}</Text>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate("Registration")}>
                                 <Icon name="plus" size={25} style={styles.AddAccount} />
                             </TouchableOpacity>

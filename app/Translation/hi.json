@@ -1,0 +1,67 @@
+{
+    "Login": {
+        "LOG IN": "लोग इन",
+        "Email Id": "ईमेल आयडी",
+        "Password": "पासवर्ड",
+        "Remember Me": "रेमेम्बेर मि",
+        "Login": "लॉगिन",
+        "Forgot Password?": "फॉरगॉट पासवर्ड?",
+        "Dont Have An Account?": "डोंट हैवे एन अकाउंट?"
+    },
+    "Home": {
+        "WELCOME": "वेलकम",
+        "Employee List": "एम्प्लोयी लिस्ट",
+        "Product Details": "प्रोडक्ट डिटेल्स",
+        "Attendance Sheet": "अटेंडेंस शीट"
+    },
+    "EmployeeList": {
+        "Employee List": "एम्प्लोयी लिस्ट",
+        "ADD EMPLOYEE": "ऐड एम्प्लोयी"
+    },
+    "Drawer": {
+        "Employee List": "एम्प्लोयी लिस्ट",
+        "Product Details": "प्रोडक्ट डिटेल्स",
+        "Attendance Sheet": "अटेंडेंस शीट",
+        "Hindi": "हिंदी",
+        "English": "इंग्लिश",
+        "Log Out": "लोग आउट"
+    },
+    "AddEmployee": {
+        "ADD EMPLOYEE": "ऐड एम्प्लोयी",
+        "First Name": "फर्स्ट नाम",
+        "Last Name": "लास्ट नाम",
+        "Phone Number": "फ़ोन नंबर",
+        "Salary": "सैलरी",
+        "Date Of Joining": "डेट ऑफ़ जोइनिंग",
+        "SUBMIT": "सबमिट"
+    },
+    "AttendanceSheet": {
+        "ViewAttendance": {
+            "View Attendance": "व्यू अटेंडेंस"
+        },
+        "MarkAttendance": {
+            "Mark Attendance": "मार्क अटेंडेंस",
+            "Full Day": "फुल डे",
+            "Half Day": "हाफ डे",
+            "Over Time": "ओवर टाइम"
+        }
+    },
+    "DeleteTost": {
+        "Swipe Left to Delete The Record": "स्वाइप लेफ्ट टू डिलीट द रिकॉर्ड"
+    },
+    "ForgotPassword": {
+        " Forgot Password": "फॉरगॉट पासवर्ड",
+        "Email Id": "ईमेल आयडी",
+        "SUBMIT": "सबमिट"
+    },
+    "Registration": {
+        "Registration": "रजिस्ट्रेशन",
+        "First Name": "फर्स्ट नाम",
+        "Last Name": "लास्ट नाम",
+        "Email Id": "ईमेल आयडी",
+        "Password": "पासवर्ड",
+        "Confirm Password": "कन्फर्म पासवर्ड",
+        "Phone Number": "फ़ोन नंबर",
+        "SUBMIT": "सबमिट"
+    }
+}

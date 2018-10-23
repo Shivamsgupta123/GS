@@ -6,8 +6,10 @@ import { Toast } from 'native-base'
 import { EmptyField, Email, Password, Name, PhoneNumber } from '../../../lib/Validation';
 import Header from '../../Header/Header';
 import ImagePicker from 'react-native-image-picker';
+import { translate } from '../../../Translation/Translation';
+import { connect } from "react-redux";
 
-export default class AddEmployee extends Component {
+class AddEmployee extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -89,7 +91,7 @@ export default class AddEmployee extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <Header title='Add Employee' leftIcon={true} action={() => this.props.navigation.goBack()} />
+                <Header title={translate("AddEmployee.ADD EMPLOYEE")} leftIcon={true} action={() => this.props.navigation.goBack()} />
                 <ScrollView>
                     <TouchableOpacity style={{ marginLeft: "24%", marginTop: "3%" }} onPress={() => this.takeimage()} >
                         {this.state.avatarSource === null ? <Image style={styles.profileimage} source={require('../../../assets/images/user.png')} /> :
@@ -97,31 +99,35 @@ export default class AddEmployee extends Component {
                     </TouchableOpacity>
                     <View style={styles.view3}>
                         <Icon name="user" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ FirstName: text })} style={styles.textinput} placeholder="First Name" placeholderTextColor="white" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ FirstName: text })} style={styles.textinput} placeholder={translate("AddEmployee.First Name")} placeholderTextColor="white" ></TextInput>
                     </View>
                     <View style={styles.view3}>
                         <Icon name="user" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ LastName: text })} style={styles.textinput} placeholder="Last Name" placeholderTextColor="white" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ LastName: text })} style={styles.textinput} placeholder={translate("AddEmployee.Last Name")} placeholderTextColor="white" ></TextInput>
                     </View>
                     <View style={styles.view3}>
                         <Icon name="phone" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ PhoneNumber: text })} style={styles.textinput} placeholder="Phone Number" placeholderTextColor="white" keyboardType="phone-pad"></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ PhoneNumber: text })} style={styles.textinput} placeholder={translate("AddEmployee.Phone Number")} placeholderTextColor="white" keyboardType="phone-pad"></TextInput>
                     </View>
                     <View style={styles.view3}>
                         <Icon name="dollar" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ Salary: text })} style={styles.textinput} placeholder="Salary" placeholderTextColor="white" keyboardType="phone-pad" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ Salary: text })} style={styles.textinput} placeholder={translate("AddEmployee.Salary")} placeholderTextColor="white" keyboardType="phone-pad" ></TextInput>
                     </View>
                     <View style={styles.view3}>
                         <Icon name="dollar" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ Salary: text })} style={styles.textinput} placeholder="Date Of Joining" placeholderTextColor="white" keyboardType="phone-pad" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ Salary: text })} style={styles.textinput} placeholder={translate("AddEmployee.Date Of Joining")} placeholderTextColor="white" keyboardType="phone-pad" ></TextInput>
                     </View>
                     <TouchableOpacity style={styles.loginbutton} onPress={() => this.validate()}>
-                        <Text style={styles.buttontext}>SUBMIT</Text>
+                        <Text style={styles.buttontext}>{translate("AddEmployee.SUBMIT")}</Text>
                     </TouchableOpacity>
                 </ScrollView>
             </View>
-
-
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    }
+}
+export default connect(mapStateToProps)(AddEmployee)

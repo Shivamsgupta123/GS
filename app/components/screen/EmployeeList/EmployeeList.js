@@ -3,17 +3,19 @@ import { View, Text, ImageBackground, Alert, FlatList, BackHandler, Image, Keybo
 import styles from './Styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Toast } from 'native-base'
-import { EmptyField, Email, Password, Name, PhoneNumber } from '../../../lib/Validation';
 import Header from '../../Header/Header';
 import { SwipeListView } from 'react-native-swipe-list-view';
-export default class EmployeeList extends Component {
+import { translate } from '../../../Translation/Translation';
+import { connect } from "react-redux";
+
+class EmployeeList extends Component {
     constructor(props) {
         super(props)
         this.EmployeeData = [{ Name: "xyz lmn", UserImage: require("../../../assets/images/user.png"), Contact: "9874563210", Salary: "25000/-", DOJ: "25/12/18" }, { Name: "abc pqr", UserImage: require("../../../assets/images/user.png"), Contact: "9987425879", Salary: "20000/-", DOJ: "25/12/15" }]
     }
     componentDidMount() {
         Toast.show({
-            text: "Swipe Left to Delete The Record.",
+            text: translate("DeleteTost.Swipe Left to Delete The Record"),
             duration: 3000,
             type: "danger"
         })
@@ -21,7 +23,7 @@ export default class EmployeeList extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <Header title='Employee List' leftIcon={true} action={() => this.props.navigation.goBack()} />
+                <Header title={translate("EmployeeList.Employee List")} leftIcon={true} action={() => this.props.navigation.goBack()} />
                 <SwipeListView
                     useFlatList
                     data={this.EmployeeData}
@@ -53,10 +55,15 @@ export default class EmployeeList extends Component {
                     keyExtractor={(item, index) => '' + index}
                 />
                 <TouchableOpacity style={styles.loginbutton} onPress={() => this.props.navigation.navigate("AddEmployee")}>
-                    <Text style={styles.buttontext}>ADD EMPLOYEE</Text>
+                    <Text style={styles.buttontext}>{translate("EmployeeList.ADD EMPLOYEE")}</Text>
                 </TouchableOpacity>
-
             </View>
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    }
+}
+export default connect(mapStateToProps)(EmployeeList)

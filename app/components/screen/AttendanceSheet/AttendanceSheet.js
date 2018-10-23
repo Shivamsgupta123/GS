@@ -6,8 +6,9 @@ import Header from '../../Header/Header';
 import { Container, Content, Tab, Tabs } from 'native-base';
 import ViewAttendance from '../ViewAttendance/ViewAttendance';
 import MarkAttendance from '../MarkAttendance/MarkAttendance';
-
-export default class AttendanceSheet extends Component {
+import { translate } from '../../../Translation/Translation';
+import { connect } from "react-redux";
+class AttendanceSheet extends Component {
     constructor(props) {
         super(props)
         console.log(props)
@@ -15,20 +16,20 @@ export default class AttendanceSheet extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <Header title='Attendance Sheet' leftIcon={true} action={() => this.props.navigation.goBack()} />
+                <Header title={translate("Home.Attendance Sheet")} leftIcon={true} action={() => this.props.navigation.goBack()} />
                 <Tabs locked={true}>
                     <Tab
                         activeTabStyle={styles.ActiveTabStyle}
                         tabStyle={styles.TabStyle}
                         textStyle={styles.TabTextStyle}
-                        heading="View Attendance" >
+                        heading={translate("AttendanceSheet.ViewAttendance.View Attendance")} >
                         <ViewAttendance />
                     </Tab>
                     <Tab
                         activeTabStyle={styles.ActiveTabStyle}
                         tabStyle={styles.TabStyle}
                         textStyle={styles.TabTextStyle}
-                        heading="Mark Attendance">
+                        heading={translate("AttendanceSheet.MarkAttendance.Mark Attendance")}>
                         <MarkAttendance />
                     </Tab>
                 </Tabs>
@@ -36,6 +37,12 @@ export default class AttendanceSheet extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    }
+}
+export default connect(mapStateToProps)(AttendanceSheet)
 
 {/* <View style={styles.Container}>
 <Header title='Attendance Sheet' leftIcon={true} action={() => this.props.navigation.goBack()} />

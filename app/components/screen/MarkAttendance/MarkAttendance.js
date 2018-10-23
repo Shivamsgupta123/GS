@@ -7,7 +7,10 @@ import { Container, Content, Tab, Tabs } from 'native-base';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import RadioGroup from 'react-native-radio-buttons-group';
 import moment from 'moment';
-export default class MarkAttendance extends Component {
+import { translate } from '../../../Translation/Translation';
+import { connect } from "react-redux";
+
+class MarkAttendance extends Component {
     constructor(props) {
         super(props)
         console.log(props)
@@ -15,13 +18,13 @@ export default class MarkAttendance extends Component {
         this.state = {
             data: [
                 {
-                    label: 'Full Day',
+                    label: translate("AttendanceSheet.MarkAttendance.Full Day"),
                     value: 'Full Day',
                     color: "#456038",
                     size: 20
                 },
                 {
-                    label: 'Half Day',
+                    label: translate("AttendanceSheet.MarkAttendance.Half Day"),
                     value: 'Half Day',
                     color: "#456038",
                     size: 20
@@ -77,7 +80,7 @@ export default class MarkAttendance extends Component {
                                     <Text style={styles.checkboxlable}>{this.props.label}</Text>
                                 </View>
                             </TouchableOpacity>
-                            <Text style={styles.checkboxClick}>Over Time</Text>
+                            <Text style={styles.checkboxClick}>{translate("AttendanceSheet.MarkAttendance.Over Time")}</Text>
                         </View>
                     </View>
                 )}
@@ -88,3 +91,9 @@ export default class MarkAttendance extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    }
+}
+export default connect(mapStateToProps)(MarkAttendance)

@@ -4,8 +4,10 @@ import styles from './Styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Header from '../../Header/Header';
 import { Container, Content, Tab, Tabs } from 'native-base';
+import { translate } from '../../../Translation/Translation';
+import { connect } from "react-redux";
 
-export default class ViewAttendance extends Component {
+class ViewAttendance extends Component {
     constructor(props) {
         super(props)
         console.log(props)
@@ -52,5 +54,11 @@ export default class ViewAttendance extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    }
+}
+export default connect(mapStateToProps)(ViewAttendance)
 
 

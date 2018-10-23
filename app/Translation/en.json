@@ -1,0 +1,67 @@
+{
+    "Login": {
+        "LOG IN": "LOG IN",
+        "Email Id": "Email Id",
+        "Password": "Password",
+        "Remember Me": "Remember Me",
+        "Login": "Login",
+        "Forgot Password?": "Forgot Password?",
+        "Dont Have An Account?": "Dont Have An Account?"
+    },
+    "Home": {
+        "WELCOME": "WELCOME",
+        "Employee List": "Employee List",
+        "Product Details": "Product Details",
+        "Attendance Sheet": "Attendance Sheet"
+    },
+    "EmployeeList": {
+        "Employee List": "Employee List",
+        "ADD EMPLOYEE": "ADD EMPLOYEE"
+    },
+    "Drawer": {
+        "Employee List": "Employee List",
+        "Product Details": "Product Details",
+        "Attendance Sheet": "Attendance Sheet",
+        "Hindi": "Hindi",
+        "English": "English",
+        "Log Out": "Log Out"
+    },
+    "AddEmployee": {
+        "ADD EMPLOYEE": "ADD EMPLOYEE",
+        "First Name": "First Name",
+        "Last Name": "Last Name",
+        "Phone Number": "Phone Number",
+        "Salary": "Salary",
+        "Date Of Joining": "Date Of Joining",
+        "SUBMIT": "SUBMIT"
+    },
+    "AttendanceSheet": {
+        "ViewAttendance": {
+            "View Attendance": "View Attendance"
+        },
+        "MarkAttendance": {
+            "Mark Attendance": "Mark Attendance",
+            "Full Day": "Full Day",
+            "Half Day": "Half Day",
+            "Over Time": "Over Time"
+        }
+    },
+    "DeleteTost": {
+        "Swipe Left to Delete The Record": "Swipe Left to Delete The Record"
+    },
+    "ForgotPassword": {
+        "Forgot Password": "Forgot Password",
+        "Email Id": "Email Id",
+        "SUBMIT": "SUBMIT"
+    },
+    "Registration": {
+        "Registration": "Registration",
+        "First Name": "First Name",
+        "Last Name": "Last Name",
+        "Email Id": "Email Id",
+        "Password": "Password",
+        "Confirm Password": "Confirm Password",
+        "Phone Number": "Phone Number",
+        "SUBMIT": "SUBMIT"
+    }
+}

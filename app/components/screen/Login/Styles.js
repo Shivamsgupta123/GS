@@ -14,9 +14,9 @@ export default styles = StyleSheet.create({
         alignItems: "center"
     },
     LogoImage: {
-        height: 80,
-        width: 80,
-        borderRadius: 40,
+        height: 100,
+        width: 100,
+        borderRadius: 50,
         borderWidth: 2,
         borderColor: "white"
     },
@@ -37,7 +37,7 @@ export default styles = StyleSheet.create({
         paddingRight: 10,
         borderBottomWidth: 2,
         borderColor: color.White,
-        color: color.PlusIconBackground
+        // color: color.PlusIconBackground
     },
     textInput: {
         height: 45,

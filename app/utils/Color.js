@@ -6,4 +6,5 @@ export const FurnitureIconBackground = "#FFFFFF";
 export const ProductlistFont = "#4F4F4F";
 export const DetailScreenFont = "#262626";
 export const ProductProducer = "#4f4f4f";
-export const LightGreen = "#89cc68"
+export const LightGreen = "#89cc68";
+export const Blue = "#01015b"

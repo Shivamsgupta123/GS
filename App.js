@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation';
 import Login from './app/components/screen/Login/Login';
@@ -12,6 +11,8 @@ import AddEmployee from './app/components/screen/AddEmployee/AddEmployee';
 import Drawer from './app/components/Drawer/Drawer';
 import AttendanceSheet from './app/components/screen/AttendanceSheet/AttendanceSheet';
 import ProductDetail from './app/components/screen/ProductDetail/ProductDetail';
+import { Provider } from 'react-redux'
+import { store } from './app/redux/configureStore';
 
 const MyApp = createDrawerNavigator({
     Home: {
@@ -84,9 +85,11 @@ const RootStack = createStackNavigator({
 export default class App extends Component {
     render() {
         return (
-            <Root>
-                <RootStack />
-            </Root>
+            <Provider store={store}>
+                <Root>
+                    <RootStack />
+                </Root>
+            </Provider>
         );
     }
 }

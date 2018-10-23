@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Toast } from 'native-base'
 import { EmptyField, Email, Password, Name, PhoneNumber } from '../../../lib/Validation';
 import Header from '../../Header/Header';
+import { translate } from '../../../Translation/Translation';
 
 export default class Registration extends Component {
     constructor(props) {
@@ -91,34 +92,34 @@ export default class Registration extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <Header title='Registration' leftIcon={true} action={() => this.props.navigation.goBack()} />
+                <Header title={translate("Registration.Registration")} leftIcon={true} action={() => this.props.navigation.goBack()} />
                 <ScrollView >
                     <View style={styles.TextInputView}>
                         <Icon name="user" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ FirstName: text })} style={styles.textinput} placeholder="First Name" placeholderTextColor="#456038" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ FirstName: text })} style={styles.textinput} placeholder={translate("Registration.First Name")} placeholderTextColor="#456038" ></TextInput>
                     </View>
                     <View style={styles.TextInputView}>
                         <Icon name="user" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ LastName: text })} style={styles.textinput} placeholder="Last Name" placeholderTextColor="#456038" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ LastName: text })} style={styles.textinput} placeholder={translate("Registration.Last Name")} placeholderTextColor="#456038" ></TextInput>
                     </View>
                     <View style={styles.TextInputView}>
                         <Icon name="envelope" size={23} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ Email: text })} style={styles.textinput} placeholder="Email" placeholderTextColor="#456038" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ Email: text })} style={styles.textinput} placeholder={translate("Registration.Email Id")} placeholderTextColor="#456038" ></TextInput>
                     </View>
                     <View style={styles.TextInputView}>
                         <Icon name="unlock" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ Password: text })} style={styles.textinput} placeholder="Password" placeholderTextColor="#456038" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ Password: text })} style={styles.textinput} placeholder={translate("Registration.Password")} placeholderTextColor="#456038" ></TextInput>
                     </View>
                     <View style={styles.TextInputView}>
                         <Icon name="lock" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ ConfirmPassword: text })} style={styles.textinput} placeholder="Confirm Password" placeholderTextColor="#456038" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ ConfirmPassword: text })} style={styles.textinput} placeholder={translate("Registration.Confirm Password")} placeholderTextColor="#456038" ></TextInput>
                     </View>
                     <View style={styles.TextInputView}>
                         <Icon name="phone" size={25} style={styles.icon} />
-                        <TextInput onChangeText={(text) => this.setState({ PhoneNumber: text })} style={styles.textinput} placeholder="Phone Number" placeholderTextColor="#456038" keyboardType="phone-pad" ></TextInput>
+                        <TextInput onChangeText={(text) => this.setState({ PhoneNumber: text })} style={styles.textinput} placeholder={translate("Registration.Phone Number")} placeholderTextColor="#456038" keyboardType="phone-pad" ></TextInput>
                     </View>
                     <TouchableOpacity onPress={() => this.validate()} style={styles.loginbutton}>
-                        <Text style={styles.buttontext}>SUBMIT</Text>
+                        <Text style={styles.buttontext}>{translate("Registration.SUBMIT")}</Text>
                     </TouchableOpacity>
                 </ScrollView>
             </View>

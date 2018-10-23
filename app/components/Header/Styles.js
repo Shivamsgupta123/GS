@@ -55,5 +55,6 @@ export default styles = StyleSheet.create({
         textShadowColor: 'black',
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 5,
-    }
+    },
+
 })
