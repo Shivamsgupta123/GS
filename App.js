@@ -81,7 +81,10 @@ const RootStack = createStackNavigator(
       }
     },
     Videos: {
-      screen: Videos
+      screen: Videos,
+      navigationOptions: {
+        header: null
+      }
     }
   },
   {

@@ -19,6 +19,8 @@
 		<string>EvilIcons.ttf</string>
 		<string>MaterialCommunityIcons.ttf</string>
 	</array>
+	<key>NSHumanReadableCopyright</key>
+	<string/>
 	<key>LSApplicationCategoryType</key>
 	<string/>
 	<key>CFBundleGetInfoString</key>

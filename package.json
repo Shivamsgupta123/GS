@@ -6,7 +6,7 @@
         "start": "node node_modules/react-native/local-cli/cli.js start",
         "test": "jest"
     },
-    "dependencies": {
+    "dependencies": {    
         "i18n-js": "^3.0.11",
         "moment": "^2.22.2",
         "native-base": "^2.10.0",
@@ -17,6 +17,7 @@
         "react-native-languages": "^3.0.1",
         "react-native-linear-gradient": "^2.4.2",
         "react-native-radio-buttons-group": "^1.0.7",
+        "react-native-svg": "^8.0.10",
         "react-native-swipe-list-view": "^1.3.1",
         "react-native-vector-icons": "^6.1.0",
         "react-navigation": "^2.17.0",

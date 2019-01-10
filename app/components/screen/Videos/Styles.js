@@ -1,6 +1,8 @@
 import { StyleSheet, Dimensions, Platform } from "react-native";
 import * as color from "../../../utils/Color";
 import * as font from "../../../utils/FontSize";
+import {IS_IPHONE_X} from "../../../utils/Phone_Info"
+import * as FONTSIZE from "../../../utils/Font-Setting"
 
 export default (styles = StyleSheet.create({
   container: {
@@ -24,6 +26,7 @@ export default (styles = StyleSheet.create({
     marginBottom: 10,
     marginHorizontal: 20,
     elevation: 1,
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+    // fontSize:FONTSIZE.FONT.SIZES.M
   }
 }));
