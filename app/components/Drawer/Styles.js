@@ -16,13 +16,14 @@ export default styles = StyleSheet.create({
         borderRadius: 50,
         borderWidth: 2,
         borderColor: color.PlusIconBackground,
-        marginTop: 10
+        marginTop: 10,
+        position:"relative"
     },
     UserName: {
         color: color.PlusIconBackground,
-        marginTop: 5,
+        marginTop: 18,
         fontWeight: font.ButtonFontWeight,
-        fontSize: 20
+        fontSize: 20,
     },
     UserEmail: {
         color: color.PlusIconBackground,
@@ -31,11 +32,14 @@ export default styles = StyleSheet.create({
     ProfileView: {
         alignItems: "center",
         height: "30%",
+        marginTop:Platform.OS==='ios'?25:0
     },
     SubView: {
-        height: "55%",
+        // height: "55%",
         // height:"70%",
         justifyContent: "center",
+        marginTop:Platform.OS==='ios'?0: 25
+        // backgroundColor:"red"
     },
     ButtonView: {
         borderBottomWidth: 1,
@@ -56,6 +60,16 @@ export default styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         //     backgroundColor: "blue"
+    },
+    EditButtonTouch:{
+        backgroundColor:color.PlusIconBackground,
+        marginTop:-35,
+        height:30,
+        justifyContent:"center",
+        alignItems:"center",
+        width:30,
+        borderRadius:15,
+        marginLeft:75
     }
 
 });

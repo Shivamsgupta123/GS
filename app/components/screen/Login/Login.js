@@ -64,15 +64,15 @@ export default class Login extends Component {
     this.login();
   }
   login() {
-    if (this.state.Email === "shivam" && this.state.Password === "shivam") {
+    // if (this.state.Email === "shivam" && this.state.Password === "shivam") {
       this.props.navigation.replace("MyApp");
-      AsyncStorage.setItem("token", "abc");
-    } else
-      Toast.show({
-        text: "Enter Valid Id orPassword.",
-        duration: 1500,
-        type: "danger"
-      });
+      // AsyncStorage.setItem("token", "abc");
+    // } else
+    //   Toast.show({
+    //     text: "Enter Valid Id orPassword.",
+    //     duration: 1500,
+    //     type: "danger"
+    //   });
   }
   checkBoxClicked = async () => {
     await this.setState({ isChecked: !this.state.isChecked });

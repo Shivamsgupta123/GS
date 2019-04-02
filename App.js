@@ -87,9 +87,9 @@ const RootStack = createStackNavigator(
       }
     }
   },
-  {
-    initialRouteName: "Videos"
-  }
+  // {
+  //   initialRouteName: "Videos"
+  // }
 );
 export default class App extends Component {
   render() {

@@ -37,16 +37,3 @@ task wrapper(type: Wrapper) {
     gradleVersion = '4.4'
     distributionUrl = distributionUrl.replace("bin", "all")
 }
-
-subprojects {
-afterEvaluate {project ->
-if (project.hasProperty("android")) {
-android {
-compileOptions {
-sourceCompatibility 1.8
-targetCompatibility 1.8
-}
-}
-}
-}
-}

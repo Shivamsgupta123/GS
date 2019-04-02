@@ -11,6 +11,7 @@ import styles from "./Styles";
 import { translate } from "../../Translation/Translation";
 import i18n from "i18n-js";
 import { connect } from "react-redux";
+import { White } from "../../utils/Color";
 class Drawer extends Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,7 @@ class Drawer extends Component {
             source={require("../../assets/images/user.png")}
             style={styles.ProfileImage}
           />
+          <TouchableOpacity style={styles.EditButtonTouch}><Icon name="pencil" size={17} color={White}/></TouchableOpacity>
           <Text style={styles.UserName}>XYZ LMN</Text>
           <Text style={styles.UserEmail}>xyz@gmail.com</Text>
         </View>
@@ -111,7 +113,7 @@ class Drawer extends Component {
                 {translate("Drawer.Log Out")}
               </Text>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> 
         </View>
       </View>
     );

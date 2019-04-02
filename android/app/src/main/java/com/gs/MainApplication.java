@@ -3,16 +3,17 @@ package com.gs;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.horcrux.svg.SvgPackage;
-import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
-import com.reactcommunity.rnlanguages.RNLanguagesPackage;
-import com.BV.LinearGradient.LinearGradientPackage;
-import com.imagepicker.ImagePickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.horcrux.svg.SvgPackage;
+import com.BV.LinearGradient.LinearGradientPackage;
+import com.reactcommunity.rnlanguages.RNLanguagesPackage;
+import com.imagepicker.ImagePickerPackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,12 +29,12 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new SvgPackage(),                
-            new RNGestureHandlerPackage(),
-            new RNLanguagesPackage(),
+            new VectorIconsPackage(),
+            new SvgPackage(),
             new LinearGradientPackage(),
+            new RNLanguagesPackage(),
             new ImagePickerPackage(),
-            new VectorIconsPackage()
+            new RNGestureHandlerPackage()
       );
     }
 
